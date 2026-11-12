@@ -1,0 +1,31 @@
+{
+  "name": "hospital_management_backend",
+  "version": "1.0.0",
+  "description": "Hospital Management System REST API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:migrate": "node src/database/seed.js",
+    "db:seed": "node src/database/seed.js",
+    "db:view": "node src/database/view.js",
+    "test": "node test_all.js",
+    "test:auth": "node test_auth.js",
+    "test:admin": "node test_admin.js",
+    "test:receptionist": "node test_receptionist.js",
+    "test:doctor": "node test_doctor.js",
+    "test:patient": "node test_patient.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
