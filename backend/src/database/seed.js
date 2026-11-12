@@ -19,6 +19,7 @@ async function runMigrationAndSeed() {
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',
     multipleStatements: true,
+    ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : undefined,
   };
 
   const dbName = process.env.DB_NAME || 'hospital_management_db';
