@@ -11,7 +11,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  origin: true, // Allow Vercel preview domains, custom domains, and local dev
   credentials: true,
 }));
 app.use(express.json());
